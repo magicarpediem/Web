@@ -1,0 +1,22 @@
+h1 {
+	color : #F400DD;
+	border-color: orange;
+	border-width: 5px;
+	border-style: groove;
+}
+
+li {
+	color : rgb(100, 200, 30);
+	border: 5px solid orange;
+}
+
+h4 {
+	color : rgba(0, 0, 0, 0.2);
+	background : rgb(255, 100, 80);
+}
+
+body {
+	background: url(magik.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}

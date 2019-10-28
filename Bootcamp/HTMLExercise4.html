@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<div>
+			<label for="firstName">First Name: </label>
+			<input type="text" id="firstName" placeholder="John" >
+			<label for="lastName">Last Name: </label>
+			<input type="text" id="lastName" placeholder="Smith" >
+		</div>
+		<div>
+			<label for="male">Male</label>
+			<input type="radio" id="male" name="gender">
+			<label for="female">Female</label>
+			<input type="radio" id="female" name="gender">
+			<label for="other">Other</label>
+			<input type="radio" id="other" name="gender">
+		</div>
+
+		<div>
+			<label for="email">Email: </label>
+			<input type="email" id="email" placeholder="your email" >
+			<label for="password">Password: </label>
+			<input type="password" id="password" placeholder="your password" required title="must be 5-10 characters" pattern="[A-Za-z0-9]{5,10}">
+		</div>
+
+		<div>
+			<label for="birthday">Birthday:</label>
+			<select id="birthday" name="month" >
+				<option>Month</option>
+				<option>January</option>
+				<option>February</option>
+			</select>
+			<select id="birthday" name="day" >
+				<option>Day</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<select id="birthday" name="year" >
+				<option>Year</option>
+				<option>2019</option>
+				<option>2020</option>
+			</select>
+		</div>
+
+		<div>
+			<label for="agree">I agree to the terms and conditions</label>
+			<input type="checkbox" id="agree" name="agree">
+		</div>
+
+		<button>Submit</button>
+	</form>
+</body>
+</html>
