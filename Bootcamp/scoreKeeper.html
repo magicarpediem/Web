@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Event Demo</title>
+    <title>Score Keeper</title>
     <style>
-        .purple {
-            background: purple;
+        .green {
+            color: green;
         }
     </style>
 </head>
 
 <body>
-    <button>Click Me</button>
+    <h1>Score Keeper</h1>
+    <h2>Player 1: <span id="p1Score">0</span></h2>
+    <h2>Player 2: <span id="p2Score">0</span></h2>
+
+    <p>Playing to: <span id="maxScore">5</span></p>
+
+    <input type="number" id="maxScoreInput" min="1" max="10" value="5">
+
+    <button id="p1Button">Player One</button>
+    <button id="p2Button">Player Two</button>
+    <button id="reset">Reset</button>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -25,7 +36,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="domEventDemo.js"></script>
+    <script src="scoreKeeper.js"></script>
 </body>
 
 </html>
