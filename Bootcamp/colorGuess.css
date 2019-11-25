@@ -1,0 +1,12 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: black;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+}
