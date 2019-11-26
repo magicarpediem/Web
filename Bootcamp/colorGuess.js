@@ -4,7 +4,7 @@ var colorCode = document.getElementById("colorCode");
 var result = document.getElementById("result");
 var answer;
 
-$(function() {
+$(function () {
   randomizeBoxes();
 });
 
@@ -25,11 +25,17 @@ function randomColor() {
 }
 
 for (var i = 0; i < boxes.length; i++) {
-  boxes[i].addEventListener("click", function() {
-    console.log("listener");
-    if ((i = answer)) {
+  (function (index) {
+    boxes[i].addEventListener("click", bindClick(i));
+  });
+}
+
+function bindClick(i) {
+  return function () {
+    console.log("listener", i, answer);
+    if ((i == answer)) {
       result.textContent = "Correct!";
       console.log("WIN");
     }
-  });
+  }
 }
