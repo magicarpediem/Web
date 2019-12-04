@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="colorGuess.css" />
-    <title>Color Guessing Game</title>
-  </head>
-  <body>
-    <div
-      class="jumbotron jumbotron-fluid bg-primary p-0 m-0 justify-content-center"
-    >
-      <div class="container text-center">
-        <h2>THE GREAT</h2>
-        <h1 id="colorCode" class="display-4">RGB(255, 255, 255)</h1>
-        <h2 class="m-0">GUESSING Game</h2>
-      </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="colorGuess.css" />
+  <title>Color Guessing Game</title>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid p-0 m-0 justify-content-center customBg">
+    <div class="container text-center text-light">
+      <h2>THE GREAT</h2>
+      <h1 id="colorCode" class="display-4">RGB(255, 255, 255)</h1>
+      <h2 class="m-0">GUESSING Game</h2>
     </div>
-    <nav class="navbar bg-white p-0 m-0 mb-3 container-fluid">
-      <div class="col-2"></div>
-      <div class="col-auto text-center">
-        <button id="newColorBtn" class="btn btn-link">NEW COLORS</button>
-      </div>
-      <div class="col-auto text-center">
-        <span id="result"></span>
-      </div>
-      <div class="col-auto text-center">
-        <button id="easyBtn" class="btn btn-link">EASY</button>
-        <button id="hardBtn" class="btn btn-link">HARD</button>
-      </div>
-      <div class="col-2"></div>
-    </nav>
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="box rounded m-3"></div>
-        <div class="box rounded m-3"></div>
-        <div class="box rounded m-3"></div>
-      </div>
-      <div class="row hard justify-content-center">
-        <div class="box rounded m-3"></div>
-        <div class="box rounded m-3"></div>
-        <div class="box rounded m-3"></div>
-      </div>
+  </div>
+  <nav class="navbar bg-white p-0 m-0 mb-3 container-fluid">
+    <div class="col-2"></div>
+    <div class="col-auto text-center">
+      <button id="resetBtn" class="btn shadow-none text-primary">NEW COLORS</button>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="colorGuess.js"></script>
-  </body>
+    <div class="col-auto text-center">
+      <span id="result"></span>
+    </div>
+    <div class="col-auto text-center">
+      <button id="easyBtn" class="btn shadow-none customBg">EASY</button>
+      <button id="hardBtn" class="btn shadow-none whiteBg">HARD</button>
+    </div>
+    <div class="col-2"></div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="box rounded m-3"></div>
+      <div class="box rounded m-3"></div>
+      <div class="box rounded m-3"></div>
+    </div>
+    <div id="hard" class="row justify-content-center">
+      <div class="rounded m-3"></div>
+      <div class="rounded m-3"></div>
+      <div class="rounded m-3"></div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="colorGuess.js"></script>
+</body>
+
 </html>
