@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+<h1>You caught <%= poke %></h1>
+
+<%
+	if (poke === "charizard") {
+%>
+<p>Good Job!</p>
+<%
+	}
+%>
+<%- include("partials/footer") %>

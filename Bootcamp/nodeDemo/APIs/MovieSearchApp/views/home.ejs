@@ -1,0 +1,14 @@
+<h1>Search Page</h1>
+
+<%
+	if (!Array.isArray(movies["Search"]) || !movies["Search"].length) {
+%>
+<h2>No search results for that title</h2>
+<%
+	}
+%>
+
+<form action="/results" method="GET">
+	<input type="text" name="s" placeholder="Movie Title">
+	<button>Search</button>
+</form>
