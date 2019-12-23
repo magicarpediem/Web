@@ -9,16 +9,25 @@ var catSchema = new mongoose.Schema({
 
 var Cat = mongoose.model("Cat", catSchema);
 
-var george = new Cat({
-	name: "George",
-	age: 11,
-	temprament: "Grouchy"
-});
+// var george = new Cat({
+// 	name: "George",
+// 	age: 11,
+// 	temprament: "Grouchy"
+// });
 
-george.save(function (err, cat) {
+// george.save(function (err, cat) {
+// 	if (err) {
+// 		console.log("ERROR");
+// 	} else {
+// 		console.log("Save Successful");
+// 	}
+// });
+
+Cat.find({}, function (err, cats) {
 	if (err) {
-		console.log("ERROR");
+		console.log("ERROR", err);
 	} else {
-		console.log("Save Successful");
+		console.log("List of cats:");
+		console.log(cats);
 	}
 });
